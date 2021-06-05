@@ -1,0 +1,16 @@
+<p>Chale</p>
+
+<div *ngIf="deleteHeroe.length!=0; else noBorrado">
+    <h3>Delete girl: <small>{{deleteEle()}}</small></h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No hay elemento borrado</h3>
+</ng-template>
+<br><br>
+
+<button (click)="deleteElement()">Borrar</button>
+
+<ul>
+    <li *ngFor="let personajes of heores">{{personajes}}</li>
+</ul>
